@@ -189,3 +189,94 @@
  *   border-radius: 4px;
  * }
  */
+
+
+/* ============================================================
+ *  5. 网站更新历史时间线（纯 CSS，限定作用域）
+ * ============================================================ */
+
+.site-history {
+  position: relative;
+  padding-left: 50px;
+  margin: 2rem 0;
+}
+
+/* -- 左侧竖线 -- */
+.site-history::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  width: 3px;
+  background: #e0e0e0;
+  border-radius: 2px;
+}
+
+/* -- 每个版本条目 -- */
+.site-history__entry {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--md-default-bg-color--light, #f5f5f8);
+  border-radius: 10px;
+  border: 1px solid var(--md-default-bg-color--lighter, #ececf1);
+  transition: box-shadow 0.2s;
+}
+
+.site-history__entry:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* -- 时间线圆点 -- */
+.site-history__marker {
+  position: absolute;
+  left: -43px;          /* 50px padding - 15px line + offset */
+  top: 1.5rem;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 3px solid #0288d1;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* -- 头部：日期 + 版本标题 -- */
+.site-history__header {
+  margin-bottom: 0.5rem;
+}
+
+.site-history__header time {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light, #888);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.site-history__header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* -- 描述文字 -- */
+.site-history__description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light, #666);
+}
+
+.site-history__description p {
+  margin: 0.3rem 0;
+}
+
+/* -- 截图展示 -- */
+.site-history__gallery {
+  margin-top: 0.8rem;
+}
+
+.site-history__gallery img {
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--md-default-bg-color--lighter, #e0e0e8);
+}

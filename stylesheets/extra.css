@@ -1,0 +1,191 @@
+/* ============================================================
+ *  MkDocs Material 自定义颜色 & 字体
+ * ============================================================ */
+
+/* ------------------------------------------------------------
+ *  1. 自定义字体（中英文分离）
+ *
+ *  原理：font-family 按顺序回退。
+ *  英文字体不含中文字形 → 浏览器遇到中文时自动跳到下一个字体。
+ *  所以 "英文字体, 中文字体, sans-serif" 即可实现中英文分离。
+ * ------------------------------------------------------------ */
+
+/* 如需 Google Fonts：取消注释并在下方 --md-text-font 中使用 */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap'); */
+
+/*
+ * 如需更精确的 unicode-range 控制（推荐用于性能优化）：
+ * 用 @font-face + unicode-range 分别声明英文和中文字体，
+ * 这样浏览器只下载当前页面实际用到的字符集。
+ */
+
+/* ----- 英文正文候选字体 ----- */
+/* Inter / Roboto / Open Sans 等只含拉丁字符，天然不会渲染中文 */
+
+/* ----- 中文正文候选字体 ----- */
+/* 霞鹜文楷 / 思源黑体 / PingFang SC / Microsoft YaHei */
+
+:root {
+  /*
+   * 正文字体栈：
+   *   英文优先 → 中文其次 → 兜底 sans-serif
+   *   浏览器自动按字符匹配，无需额外配置
+   */
+  --md-text-font:
+    /* ── 英文层（只有拉丁字符，中文不会命中）── */
+    "Inter", "Roboto",
+    /* ── 中文层（英文层未命中时生效）── */
+    "霞鹜文楷", "PingFang SC", "Microsoft YaHei", "Noto Sans SC",
+    /* ── 兜底 ── */
+    sans-serif;
+
+  /* -- 代码字体（代码几乎全是英文，无需中文回退） -- */
+  --md-code-font:
+    "Cascadia Code", "JetBrains Mono", "Fira Code",
+    "Consolas", "Courier New", monospace;
+
+  /* -- 正文字号（Material 默认为 .8rem，偏小） -- */
+  --md-typeset-font-size: .9rem;    /* 正文：16px × 0.9 ≈ 14.4px，适中 */
+  --md-code-font-size:   .85em;     /* 代码块稍小，与正文协调 */
+}
+
+/* ------------------------------------------------------------
+ *  1.5 侧栏 & 顶部导航栏字号（独立控制）
+ * ------------------------------------------------------------ */
+
+/* -- 顶部导航栏标签页 -- */
+.md-tabs__link {
+  font-size: .75rem;      /* 比正文略小，紧凑 */
+}
+
+/* -- 左侧导航栏 -- */
+.md-nav__link {
+  font-size: .78rem;      /* 侧栏项目字号 */
+}
+
+/* -- 侧栏分组标题（如 "Python" "Linux"） -- */
+.md-nav__title {
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+/* ------------------------------------------------------------
+ *  2. 自定义颜色（浅色模式）
+ * ------------------------------------------------------------ */
+[data-md-color-scheme="default"] {
+  /* -- 主色调（覆盖 mkdocs.yml 中的 primary） -- */
+  --md-primary-fg-color:        #0288d1;   /* 主色 */
+  --md-primary-fg-color--light: #03a9f4;   /* 悬停时稍亮 */
+  --md-primary-fg-color--dark:  #01579b;   /* 深色变体 */
+
+  /* -- 强调色（覆盖 mkdocs.yml 中的 accent） -- */
+  --md-accent-fg-color:                #ff6d00;
+  --md-accent-fg-color--transparent:   #ff6d001a;
+
+  /* -- 正文字体颜色 -- */
+  --md-default-fg-color:        #1a1a2e;   /* 主文字 */
+  --md-default-fg-color--light: #6e6e8a;   /* 次要文字 */
+  --md-default-fg-color--lighter: #b0b0c0; /* 更淡的文字 */
+  --md-default-fg-color--lightest: #e0e0e8;/* 最淡的文字 */
+
+  /* -- 背景色 -- */
+  --md-default-bg-color:        #ffffff;   /* 页面背景 */
+  --md-default-bg-color--light: #f5f5f8;   /* 浅色背景块 */
+  --md-default-bg-color--lighter: #ececf1; /* 更浅背景 */
+
+  /* -- 代码块 -- */
+  --md-code-fg-color:           #1a1a2e;
+  --md-code-bg-color:           #f0f0f5;
+  --md-code-hl-color:           #ffd54f66; /* 代码高亮 */
+
+  /* -- 链接 -- */
+  --md-typeset-a-color:         #0288d1;
+  --md-typeset-a-hover-color:   #01579b;
+
+  /* -- 提示框（Admonition）自定义颜色 -- */
+  --md-admonition-note-fg:      #0288d1;
+  --md-admonition-note-bg:      #e1f5fe;
+  --md-admonition-tip-fg:       #2e7d32;
+  --md-admonition-tip-bg:       #e8f5e9;
+  --md-admonition-warning-fg:   #ef6c00;
+  --md-admonition-warning-bg:   #fff3e0;
+  --md-admonition-danger-fg:    #c62828;
+  --md-admonition-danger-bg:    #ffebee;
+}
+
+/* ------------------------------------------------------------
+ *  3. 自定义颜色（深色模式）
+ * ------------------------------------------------------------ */
+[data-md-color-scheme="slate"] {
+  /* -- 主色调 -- */
+  --md-primary-fg-color:        #4fc3f7;   /* 深色模式主色稍亮 */
+  --md-primary-fg-color--light: #80d8ff;
+  --md-primary-fg-color--dark:  #0288d1;
+
+  /* -- 强调色 -- */
+  --md-accent-fg-color:                #ffab40;
+  --md-accent-fg-color--transparent:   #ffab4033;
+
+  /* -- 正文字体颜色 -- */
+  --md-default-fg-color:        #e0e0e8;
+  --md-default-fg-color--light: #a0a0b8;
+  --md-default-fg-color--lighter: #6e6e8a;
+  --md-default-fg-color--lightest: #3a3a50;
+
+  /* -- 背景色 -- */
+  --md-default-bg-color:        #12121a;
+  --md-default-bg-color--light: #1e1e2e;
+  --md-default-bg-color--lighter: #2a2a3c;
+
+  /* -- 代码块 -- */
+  --md-code-fg-color:           #e0e0e8;
+  --md-code-bg-color:           #1e1e2e;
+  --md-code-hl-color:           #ffd54f33;
+
+  /* -- 链接 -- */
+  --md-typeset-a-color:         #4fc3f7;
+  --md-typeset-a-hover-color:   #80d8ff;
+
+  /* -- 提示框 -- */
+  --md-admonition-note-fg:      #4fc3f7;
+  --md-admonition-note-bg:      #0d3b4e;
+  --md-admonition-tip-fg:       #66bb6a;
+  --md-admonition-tip-bg:       #0d3310;
+  --md-admonition-warning-fg:   #ffa726;
+  --md-admonition-warning-bg:   #3e2723;
+  --md-admonition-danger-fg:    #ef5350;
+  --md-admonition-danger-bg:    #3e1010;
+}
+
+/* ------------------------------------------------------------
+ *  4. 额外的样式定制（示例）
+ * ------------------------------------------------------------ */
+
+/* -- 调整正文字号 -- */
+/* :root {
+ *   --md-typeset-font-size: .8rem;
+ * }
+ */
+
+/* -- 调整代码字号 -- */
+/* :root {
+ *   --md-code-font-size: .85em;
+ * }
+ */
+
+/* -- 给表格添加圆角 -- */
+/* .md-typeset table:not([class]) {
+ *   border-radius: .5rem;
+ *   overflow: hidden;
+ * }
+ */
+
+/* -- 自定义滚动条（Webkit 浏览器） -- */
+/* ::-webkit-scrollbar {
+ *   width: 8px;
+ * }
+ * ::-webkit-scrollbar-thumb {
+ *   background: var(--md-default-fg-color--lighter);
+ *   border-radius: 4px;
+ * }
+ */

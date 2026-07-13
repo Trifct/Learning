@@ -78,6 +78,11 @@ nav:
     - 其他:
       - notes/其他/index.md
 
+  - Thoughts:
+    - thoughts/index.md
+    - 施工记录:
+      - thoughts/history.md
+
 plugins:
   - search
   - statistics:

@@ -54,27 +54,29 @@ theme:
 
 nav:
   - Home: index.md
-
-  - 结构化学: 
-    - 结构化学/index.md
-    - 结构化学 I:
-      - 结构化学/结构化学 1/index.md
-      - Chapter 1: 结构化学/结构化学 1/Chapter 1.md
-    - 结构化学 II:
-      - 结构化学/结构化学 2/index.md
   
-  - 物理化学:
-    - 物理化学 I :
-      - 物理化学/物理化学 1/index.md
-      - Chapter 1: 物理化学/物理化学 1/Chapter 1.md
-  
-  - 化学实验报告:
-    - 化学实验/index.md
-    - 化学测量学实验上:
-      - 化学实验/化学测量学实验上/index.md
-  
-  - 其他:
-    - 其他/index.md
+  - Notes: 
+    - notes/index.md
+    - 结构化学: 
+      - notes/结构化学/index.md
+      - 结构化学 I:
+        - notes/结构化学/结构化学 1/index.md
+        - Chapter 1: notes/结构化学/结构化学 1/Chapter 1.md
+      - 结构化学 II:
+        - notes/结构化学/结构化学 2/index.md
+    
+    - 物理化学:
+      - 物理化学 I :
+        - notes/物理化学/物理化学 1/index.md
+        - Chapter 1: notes/物理化学/物理化学 1/Chapter 1.md
+    
+    - 化学实验报告:
+      - notes/化学实验/index.md
+      - 化学测量学实验上:
+        - notes/化学实验/化学测量学实验上/index.md
+    
+    - 其他:
+      - notes/其他/index.md
 
 plugins:
   - search

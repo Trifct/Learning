@@ -1,17 +1,15 @@
-# Welcome to MkDocs
+---
+statistics: True
+hide:
+  - toc
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# 欢迎来到 Trifct 的妙妙屋！
 
-## Commands
+这里将会存放一些整理的笔记，也许未来会有拓展的其他内容！
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+目前计划把已经整理过的结构 1 笔记进行按章节切割上传 markdown ，并将本学期物化 1 的笔记进行修复后上传（总感觉会咕咕咕怎么办）
 
-## Project layout
+先写到这里吧 hhhh
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+（看到室友的主页心血来潮也搭一个，但是目前还很简陋，待我琢磨出来怎么样做比较美观的 html 再更换吧）

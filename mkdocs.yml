@@ -1,3 +1,104 @@
-site_name: My Docs
+site_name: Trifct 的妙妙屋
 theme:
   name: material
+
+  # -- 浏览器标签页图标 --
+  favicon: assets/favicon.svg
+
+  # -- Material 功能增强（平衡导航栏） --
+  features:
+    - navigation.tabs          # 顶部标签页导航，填满中间区域
+    - navigation.tabs.sticky   # 顶部标签页导航栏固定
+    - navigation.top           # 回到顶部按钮
+    - navigation.path          # 面包屑导航
+    - navigation.indexes       # 自动生成索引页
+    - navigation.footer        # 页面底部上/下页导航
+    - toc.follow               # 目录跟随滚动
+    - toc.integrate            # 目录与正文整合
+
+    - search.highlight         # 搜索结果高亮
+
+  icon:
+    logo: simple/moleculer
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+    repo: fontawesome/brands/github
+
+  palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: 切换为亮色模式
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: cyan
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch 
+        name: 切换为暗色模式
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: 切换为系统默认
+  
+  language: zh
+
+nav:
+  - Home: index.md
+
+  - 结构化学: 
+    - 结构化学/index.md
+    - 结构化学 I:
+      - 结构化学/结构化学 1/index.md
+      - Chapter 1: 结构化学/结构化学 1/Chapter 1.md
+    - 结构化学 II:
+      - 结构化学/结构化学 2/index.md
+  
+  - 物理化学:
+    - 物理化学 I :
+      - 物理化学/物理化学 1/index.md
+      - Chapter 1: 物理化学/物理化学 1/Chapter 1.md
+  
+  - 化学实验报告:
+    - 化学实验/index.md
+    - 化学测量学实验上:
+      - 化学实验/化学测量学实验上/index.md
+  
+  - 其他:
+    - 其他/index.md
+
+plugins:
+  - search
+  - statistics:
+      exclude_path: 'index.md'
+
+# -- 右上角 GitHub 仓库链接 --
+repo_url: https://github.com/trifct/trifct.github.io
+repo_name: Trifct 的秘密小仓库
+
+copyright: "Copyright © 2026 Trifct"
+
+extra_css:
+  - stylesheets/extra.css
+
+# -- 数学公式渲染（MathJax） --
+markdown_extensions:
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

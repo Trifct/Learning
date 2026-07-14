@@ -17,8 +17,8 @@ title: 施工记录
       </p>
     </div>
     <div class="site-history__gallery">
-      <a href="/assets/img/history/MyBase-v1.0.png">
-        <img src="/assets/img/history/MyBase-v1.0.png" alt="搓了一整天的 v1.0">
+      <a href="/assets/img/history/Structure_1_done.png">
+        <img src="/assets/img/history/Structure_1_done.png" alt="结构 I 施工完毕">
       </a>
     </div>
   </section>

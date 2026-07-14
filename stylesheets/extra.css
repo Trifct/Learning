@@ -3,6 +3,65 @@
  * ============================================================ */
 
 /* ------------------------------------------------------------
+ *  0. 标题自动编号（CSS 计数器）
+ *
+ *  层级效果示例：
+ *    h2 → 1, 2, 3...
+ *    h3 → 1.1, 1.2, 2.1...
+ *    h4 → 1.1.1, 1.1.2...
+ *    h5 → 1.1.1.1, ...
+ * ------------------------------------------------------------ */
+.md-typeset {
+  counter-reset: h2-counter;
+}
+
+.md-typeset h2 {
+  counter-reset: h3-counter;
+}
+.md-typeset h2::before {
+  counter-increment: h2-counter;
+  content: counter(h2-counter) ". ";
+}
+
+.md-typeset h3 {
+  counter-reset: h4-counter;
+}
+.md-typeset h3::before {
+  counter-increment: h3-counter;
+  content: counter(h2-counter) "." counter(h3-counter) " ";
+}
+
+.md-typeset h4 {
+  counter-reset: h5-counter;
+}
+.md-typeset h4::before {
+  counter-increment: h4-counter;
+  content: counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) " ";
+}
+
+.md-typeset h5 {
+  counter-reset: h6-counter;
+}
+.md-typeset h5::before {
+  counter-increment: h5-counter;
+  content: counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) " ";
+}
+
+.md-typeset h6::before {
+  counter-increment: h6-counter;
+  content: counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "." counter(h6-counter) " ";
+}
+
+/* ------------------------------------------------------------
+ *  0.5 图片始终居中
+ * ------------------------------------------------------------ */
+.md-typeset img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ------------------------------------------------------------
  *  1. 自定义字体（中英文分离）
  *
  *  原理：font-family 按顺序回退。
@@ -79,8 +138,8 @@
   --md-primary-fg-color--dark:  #01579b;   /* 深色变体 */
 
   /* -- 强调色（覆盖 mkdocs.yml 中的 accent） -- */
-  --md-accent-fg-color:                #ff6d00;
-  --md-accent-fg-color--transparent:   #ff6d001a;
+  --md-accent-fg-color:                #00838f;
+  --md-accent-fg-color--transparent:   #00838f1a;
 
   /* -- 正文字体颜色 -- */
   --md-default-fg-color:        #1a1a2e;   /* 主文字 */
@@ -123,8 +182,8 @@
   --md-primary-fg-color--dark:  #0288d1;
 
   /* -- 强调色 -- */
-  --md-accent-fg-color:                #ffab40;
-  --md-accent-fg-color--transparent:   #ffab4033;
+  --md-accent-fg-color:                #4dd0e1;
+  --md-accent-fg-color--transparent:   #4dd0e133;
 
   /* -- 正文字体颜色 -- */
   --md-default-fg-color:        #e0e0e8;

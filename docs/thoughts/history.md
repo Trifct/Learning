@@ -4,6 +4,28 @@ title: 施工记录
   <section class="site-history__entry">
     <div class="site-history__marker" aria-hidden="true"></div>
     <header class="site-history__header">
+      <time datetime="2026-07-14">2026.07.14</time>
+      <h2>v1.1 · work work work work</h2>
+    </header>
+    <div class="site-history__description">
+      <p>
+      结构 I 施工完毕！</br>
+      勤劳又勇敢的 Trifct ~ 为了妙妙屋关键的结构化学 I ~ </br>
+      他做出了巨大的贡献 ~ 巨大的牺牲 ~ 巨大的 carry ~ </br>
+      无敌了 ~ 无敌了 ~ </br>
+      参考文献：xlpj 打灰歌
+      </p>
+    </div>
+    <div class="site-history__gallery">
+      <a href="/assets/img/history/MyBase-v1.0.png">
+        <img src="/assets/img/history/MyBase-v1.0.png" alt="搓了一整天的 v1.0">
+      </a>
+    </div>
+  </section>
+
+  <section class="site-history__entry">
+    <div class="site-history__marker" aria-hidden="true"></div>
+    <header class="site-history__header">
       <time datetime="2026-07-13">2026.07.13</time>
       <h2>v1.0 · 妙妙屋打下了第一块地基！</h2>
     </header>

@@ -61,7 +61,18 @@ nav:
       - notes/结构化学/index.md
       - 结构化学 I:
         - notes/结构化学/结构化学 1/index.md
-        - Chapter 1: notes/结构化学/结构化学 1/Chapter 1.md
+        - Chapter 1-2: notes/结构化学/结构化学 1/Chapter 1-2.md
+        - Chapter 3: notes/结构化学/结构化学 1/Chapter 3.md
+        - Chapter 4: notes/结构化学/结构化学 1/Chapter 4.md
+        - Chapter 5: notes/结构化学/结构化学 1/Chapter 5.md
+        - Chapter 6: notes/结构化学/结构化学 1/Chapter 6.md
+        - Chapter 7: notes/结构化学/结构化学 1/Chapter 7.md
+        - Chapter 8: notes/结构化学/结构化学 1/Chapter 8.md
+        - Chapter 9: notes/结构化学/结构化学 1/Chapter 9.md
+        - Chapter 10: notes/结构化学/结构化学 1/Chapter 10.md
+        - Chapter 11: notes/结构化学/结构化学 1/Chapter 11.md
+        - Chapter 12: notes/结构化学/结构化学 1/Chapter 12.md
+        
       - 结构化学 II:
         - notes/结构化学/结构化学 2/index.md
     
@@ -99,6 +110,7 @@ extra_css:
 
 # -- 数学公式渲染（MathJax） --
 markdown_extensions:
+  - attr_list
   - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji

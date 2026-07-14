@@ -1,9 +1,13 @@
 window.MathJax = {
+  loader: {
+    load: ["[tex]/color", "[tex]/braket"]
+  },
   tex: {
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
     processEscapes: false,       // 关闭 $ 转义，避免 # 被误解析
-    processEnvironments: true
+    processEnvironments: true,
+    packages: {"[+]": ["color", "braket"]}
   },
   options: {
     ignoreHtmlClass: ".*|",

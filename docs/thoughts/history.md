@@ -4,6 +4,20 @@ title: 施工记录
   <section class="site-history__entry">
     <div class="site-history__marker" aria-hidden="true"></div>
     <header class="site-history__header">
+      <time datetime="2026-07-xx">2026.07 ~ 2026.08</time>
+      <h2>v1.2 · 暑假摸鱼一阶段</h2>
+    </header>
+    <div class="site-history__description">
+      <p>
+      暑假稍微加一点东西，主要是太懒了hhh </br>
+      目前ode笔记还在施工，敬请期待 ~ </br>
+      </p>
+    </div>
+  </section>
+
+  <section class="site-history__entry">
+    <div class="site-history__marker" aria-hidden="true"></div>
+    <header class="site-history__header">
       <time datetime="2026-07-14">2026.07.14</time>
       <h2>v1.1 · work work work work</h2>
     </header>
